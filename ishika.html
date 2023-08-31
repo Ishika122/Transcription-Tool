@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-size-adjust: 15px;
+    }
+
+    header {
+      background-color: #b5f491;
+      color: rgb(19, 17, 18);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border: 3px solid #6c53fa;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, button {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #aa4aea;
+      color: rgb(11, 11, 11);
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1ced38;
+    }
+  </style>
+  <title>DNA to RNA Conversion</title>
+</head>
+<body>
+  <header>
+    <h1>Transcription</h1>
+  </header>
+  <main>
+    <form id="conversionForm">
+      <label for="dnaSequence">Enter DNA Sequence:</label>
+      <input type="text" id="dnaSequence" placeholder="Enter DNA sequence..." required>
+      <button type="submit">Convert</button>
+    </form>
+    <p id="rnaSequence"></p>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const conversionForm = document.getElementById("conversionForm");
+      const dnaSequenceInput = document.getElementById("dnaSequence");
+      const rnaSequenceOutput = document.getElementById("rnaSequence");
+
+      conversionForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const dnaSequence = dnaSequenceInput.value.toUpperCase();
+        const rnaSequence = convertToRNA(dnaSequence);
+        rnaSequenceOutput.textContent = `RNA Sequence: ${rnaSequence}`;
+      });
+
+      function convertToRNA(dna) {
+        return dna.replace(/T/g, "U");
+      }
+    });
+  </script>
+  
+<pre style="font-size: 125%;" style="text-align: left;" 
+
+<b> 
+<h4>
+    Transcription Tool
+    
+    The "Transcription Tool" is a simple web application designed to assist users in converting DNA sequences to their corresponding RNA sequences. 
+
+    This tool provides an easy and convenient way for researchers, students, and enthusiasts in the field of genetics and molecular biology to perform DNA 
+   
+    to RNA conversion without the need for manual calculations.
+    
+    Key Features:
+    
+    1. User-Friendly Interface: The tool features a user-friendly interface that allows users to input DNA sequences quickly and efficiently.
+    
+    2. Real-Time Conversion: As users input their DNA sequence, the tool performs real-time conversion to RNA by replacing each occurrence of the DNA base "T" with the RNA base "U".
+    
+    3. Instant Results: Upon clicking the "Convert" button, the tool instantly displays the converted RNA sequence, providing immediate feedback to the user.
+    
+    4. Case Insensitivity: The tool automatically converts the input DNA sequence to uppercase, ensuring that both lowercase and uppercase DNA bases are accurately converted to RNA.
+    
+    5. Styling and Layout: The tool has a clean and visually appealing design. The header showcases the tool's name, and the main content area features a form for 
+    
+    inputting the DNA sequence and displaying the resulting RNA sequence.
+    
+    6. Responsive Design: The tool is designed to be responsive and adaptable, making it accessible on various devices including desktops, tablets, and smartphones.
+    
+    7. Validation: The form includes required field validation, ensuring that users cannot submit an empty DNA sequence.
+    
+    8. Easy Implementation: The tool is created as a single HTML file, making it easy to deploy and share with others without the need for complex setup.
+    
+    Use Cases:
+    
+    - Education: Students studying genetics and molecular biology can use this tool to quickly convert DNA sequences to RNA, aiding in their understanding of transcription.
+      
+    - Research: Researchers in genetics, bioinformatics, and related fields can use this tool to easily convert DNA sequences as part of their analysis and experiments.
+      
+    - Teaching: Educators can use this tool in the classroom to demonstrate DNA to RNA transcription to students, making the concept more tangible and interactive.
+      
+    - Convenience: Anyone interested in genetics, gene expression, or molecular biology can use this tool to perform DNA to RNA conversions without the need for manual calculations.
+    
+    The "DNA to RNA Conversion Tool" provides a valuable resource for individuals interested in genetics, offering a straightforward solution for performing this fundamental molecular
+    
+    conversion. Whether for educational, research, or personal purposes, this tool simplifies the process of understanding and working with genetic sequences.
+    </pre> </b>
+</body></style> 
+</html>
+<footer> <b><pre style="text-align: center;"
+    <p>&copy; 2023 Transcription tool
+    
+         created by Ishika
+</pre></b>
+   </h4>
+</footer>
+
